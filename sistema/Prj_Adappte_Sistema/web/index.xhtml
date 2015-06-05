@@ -5,42 +5,42 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <link rel="icon" href="resources/img/Cobyte_Solo.png" type="image/x-icon"/>
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <h:outputStylesheet name="./css/default.css"/>
         <h:outputStylesheet name="./css/cssLayout.css"/>
-        <title>Facelets Template</title>
+        <title>Cobyte - Adappte</title>
     </h:head>
+    <h:body>
+        <p:panel id="basic" header="Login" 
+                 style=" text-align: center; 
+                 width: 250px; 
+                 margin-left: auto; 
+                 margin-right: auto;
+                 margin-top: 20%">
 
-    <h:body style="width: 400px">
-        <p:panel id="basic" header="Login" style="margin-bottom:20px">
-            <p:panelGrid>
-                <p:row>
-                    <p:column>
-                        <h:outputText value="Usuário"/>
-                    </p:column>
-                    <p:column>
-                        <p:inputText/>
-                    </p:column>
-                </p:row>
-                <p:row>
-                    <p:column>
-                        <h:outputText value="Senha"/>
-                    </p:column>
-                    <p:column>
-                        <p:password promptLabel="Nível de segurança" weakLabel="Senha fraca" goodLabel="Senha boa" strongLabel="Senha forte" id="feedback" value="#{login.password2}" feedback="true" />
-                    </p:column>
-                </p:row>           
-            </p:panelGrid>
+            <div style="overflow: auto">
+                <p:inputText type="text" placeholder="Usuário"/>
+            </div>
+            <div style="overflow: auto; margin-top: 5px">
+                <p:password id="feedback" value="#{login.password}" feedback="true" placeholder="Senha"/>
+            </div>
+
             <f:facet name="footer">
-                <p:button value="Entrar" icon="ui-icon-star">
+                <p:button value="Entrar" icon="ui-icon-locked" style="margin-left: 2%">
                     <f:param name="productId" value="10" />
                 </p:button>
-                <p:link value="Esqueci a senha">
+                <p:link value="Esqueceu a sua senha?" style="float: right; color: #427FED; font-size: 8px; padding-top: 15px; font-weight: normal">
                     <f:param name="productId" value="10" />
                 </p:link>
             </f:facet>
-        </p:panel>
+        </p:panel> 
+        <div id="bottom">
+            <img src="resources/img/Cobyte_Horizontal.png" height="auto" width="150px" 
+                 style="margin-left: auto; margin-right: auto; display: block; margin-top: 10%"/>
+            <p:separator />
+        </div>
     </h:body>
 </html>
 
