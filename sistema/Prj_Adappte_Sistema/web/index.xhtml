@@ -6,6 +6,11 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <link rel="icon" href="resources/img/Cobyte_Solo.png" type="image/x-icon"/>
+    <style type="text/css">
+        html{
+            min-height: 300px;
+        }
+    </style>
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <h:outputStylesheet name="./css/default.css"/>
@@ -18,27 +23,29 @@
                  width: 250px; 
                  margin-left: auto; 
                  margin-right: auto;
-                 margin-top: 20%">
+                 max-height: 145px;
+                 height: 50%;
+                 overflow: auto;
+                 margin: auto;
+                 position: absolute;
+                 top: 0; left: 0; bottom: 0; right: 0;
+                 ">
 
-            <div style="overflow: auto">
-                <p:inputText type="text" placeholder="Usuário"/>
+            <div>
+                <p:inputText type="login" placeholder="Usuário"/>
             </div>
-            <div style="overflow: auto; margin-top: 5px">
-                <p:password id="feedback" value="#{login.password}" feedback="true" placeholder="Senha"/>
+            <div style="margin-top: 5px">
+                <p:password id="senha" placeholder="Senha"/>
             </div>
 
             <f:facet name="footer">
-                <p:button value="Entrar" icon="ui-icon-locked" style="margin-left: 2%">
-                    <f:param name="productId" value="10" />
-                </p:button>
-                <p:link value="Esqueceu a sua senha?" style="float: right; color: #427FED; font-size: 8px; padding-top: 15px; font-weight: normal">
-                    <f:param name="productId" value="10" />
-                </p:link>
+                <p:button value="Entrar" icon="ui-icon-locked" style="margin-left: 2%; left: 18px;"/>
+                <p:link value="Esqueceu a sua senha?" style="float: right; color: #427FED; font-size: 8px; padding-top: 12px; font-weight: normal"/>
             </f:facet>
         </p:panel> 
         <div id="bottom">
-            <img src="resources/img/Cobyte_Horizontal.png" height="auto" width="150px" 
-                 style="margin-left: auto; margin-right: auto; display: block; margin-top: 10%"/>
+            <img src="resources/img/Cobyte_Horizontal.png" height="auto" width="160px" 
+                 style="margin-left: auto; margin-right: auto; display: block; margin-top: 10%;"/>
             <p:separator />
         </div>
     </h:body>
